@@ -1,0 +1,9 @@
+{% if response %}
+    <ul>
+    {% for question in response %}
+        <li><a href="/polls/{{ question.id }}/">{{ question}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
